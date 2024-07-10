@@ -97,7 +97,10 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: wso2am-gateway-conf
-          mountPath: /home/wso2carbon/wso2-config-volume/repository/conf        
+          mountPath: /home/wso2carbon/wso2-config-volume/repository/conf
+        - name: wso2am-gateway-carbon
+          mountPath: /home/wso2carbon/wso2am-4.2.0/repository/conf/carbon.xml
+          subPath: carbon.xml
       serviceAccountName: {{ .Values.kubernetes.serviceAccount }}
       {{- if .Values.wso2.deployment.am.imagePullSecrets }}
       imagePullSecrets:
