@@ -16,7 +16,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "am-pattern-3.resource.prefix" . }}-am-gateway-conf
+  name: {{ template "am-pattern-3.resource.prefix" . }}-am-gateway-carbon
   namespace : {{ .Release.Namespace }}  
 data:  
   carbon.xml: |-
