@@ -27,9 +27,6 @@ spec:
   {{- if .Values.wso2.deployment.am.websub.ingress.className }}
   ingressClassName: {{ .Values.wso2.deployment.am.websub.ingress.className }}
   {{- end }}
-  tls:
-  - hosts:
-    - {{ .Values.wso2.deployment.am.websub.ingress.hostname }}
   rules:
   - host: {{ .Values.wso2.deployment.am.websub.ingress.hostname }}
     http:
@@ -40,5 +37,5 @@ spec:
           service:
             name: {{ template "am-pattern-3.resource.prefix" . }}-am-gateway-service
             port:
-              number: 8021
+              number: 9021
 {{- end -}}
