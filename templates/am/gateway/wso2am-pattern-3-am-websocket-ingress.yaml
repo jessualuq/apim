@@ -37,5 +37,5 @@ spec:
           service:
             name: {{ template "am-pattern-3.resource.prefix" . }}-am-gateway-service
             port:
-              number: 8099
+              number: 9099
 {{- end -}}
