@@ -27,9 +27,6 @@ spec:
   {{- if .Values.wso2.deployment.am.websocket.ingress.className }}
   ingressClassName: {{ .Values.wso2.deployment.am.websocket.ingress.className }}
   {{- end }}
-  tls:
-  - hosts:
-    - {{ .Values.wso2.deployment.am.websocket.ingress.hostname }}
   rules:
   - host: {{ .Values.wso2.deployment.am.websocket.ingress.hostname }}
     http:
