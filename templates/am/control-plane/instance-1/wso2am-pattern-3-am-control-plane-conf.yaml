@@ -119,8 +119,11 @@ data:
     properties.proxyPort = 80
 
     [transport.https]
-    properties.port = 9443
-    properties.proxyPort = 443
+    #properties.port = 9443
+    #properties.proxyPort = 443
+    properties.scheme = http
+    properties.secure = false
+    properties.SSLEnabled = false
 
     [apim.event_hub]
     enable = true
