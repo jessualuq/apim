@@ -193,13 +193,13 @@ data:
     allow_headers = ["authorization","Access-Control-Allow-Origin","Content-Type","SOAPAction","apikey","Internal-Key"]
     allow_credentials = false
 
-    #[apim.workflow]
-    #enable = false
+    [apim.workflow]
+    enable = ture
     #service_url = "https://localhost:9445/bpmn"
-    #username = "$ref{super_admin.username}"
-    #password = "$ref{super_admin.password}"
-    #callback_endpoint = "https://localhost:${mgt.transport.https.port}/api/am/admin/v0.17/workflows/update-workflow-status"
-    #token_endpoint = "https://localhost:${https.nio.port}/token"
+    username = "$ref{super_admin.username}"
+    password = "$ref{super_admin.password}"
+    callback_endpoint = "https://localhost:9763/api/am/admin/v0.17/workflows/update-workflow-status"
+    token_endpoint = "https://localhost:${http.nio.port}/token"
     #client_registration_endpoint = "https://localhost:${mgt.transport.https.port}/client-registration/v0.17/register"
     #client_registration_username = "$ref{super_admin.username}"
     #client_registration_password = "$ref{super_admin.password}"
