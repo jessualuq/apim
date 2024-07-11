@@ -95,7 +95,7 @@ data:
     ws_endpoint = "ws://{{ .Values.wso2.deployment.am.websocket.ingress.hostname }}"
     wss_endpoint = "wss://{{ .Values.wso2.deployment.am.websocket.ingress.hostname }}"
     http_endpoint = "http://{{ .Values.wso2.deployment.am.gateway.ingress.hostname }}"
-    https_endpoint = "https://{{ .Values.wso2.deployment.am.gateway.ingress.hostname }}"
+    #https_endpoint = "https://{{ .Values.wso2.deployment.am.gateway.ingress.hostname }}"
     websub_event_receiver_http_endpoint = "http://{{ .Values.wso2.deployment.am.websub.ingress.hostname }}"
     websub_event_receiver_https_endpoint = "https://{{ .Values.wso2.deployment.am.websub.ingress.hostname }}"
 
