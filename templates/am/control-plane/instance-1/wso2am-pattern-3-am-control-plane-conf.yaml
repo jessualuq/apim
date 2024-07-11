@@ -124,7 +124,7 @@ data:
     properties.scheme = http
     properties.secure = false
     properties.SSLEnabled = false
-
+    
     [apim.event_hub]
     enable = true
     username= "$ref{super_admin.username}"
