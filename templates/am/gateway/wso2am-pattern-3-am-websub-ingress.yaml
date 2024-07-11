@@ -19,6 +19,7 @@ kind: Ingress
 metadata:
   name: {{ template "am-pattern-3.resource.prefix" . }}-am-websub-ingress
   namespace : {{ .Release.Namespace }}
+  servicePort: http
 {{- if .Values.wso2.deployment.am.websub.ingress.annotations }}
   annotations:
 {{ toYaml .Values.wso2.deployment.am.websub.ingress.annotations | indent 4 }}
